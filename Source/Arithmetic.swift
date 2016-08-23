@@ -363,7 +363,7 @@ public func % (lhs: [Double], rhs: Double) -> [Double] {
     return mod(lhs, y: [Double](repeating: rhs, count: lhs.count))
 }
 
-infix operator • {}
+infix operator •
 public func • (lhs: [Double], rhs: [Double]) -> Double {
     return dot(lhs, y: rhs)
 }

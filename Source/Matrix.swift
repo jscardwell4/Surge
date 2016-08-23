@@ -27,7 +27,7 @@ public enum MatrixAxies {
     case column
 }
 
-public struct Matrix<T where T: FloatingPoint, T: ExpressibleByFloatLiteral> {
+public struct Matrix<T> where T: FloatingPoint, T: ExpressibleByFloatLiteral {
     public typealias Element = T
 
     let rows: Int
@@ -380,7 +380,7 @@ public func / (lhs: Matrix<Float>, rhs: Float) -> Matrix<Float> {
     return result;
 }
 
-postfix operator ′ {}
+postfix operator ′
 public postfix func ′ (value: Matrix<Float>) -> Matrix<Float> {
     return transpose(value)
 }
